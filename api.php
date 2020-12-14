@@ -9,6 +9,8 @@ Route::group(['middleware' => ['jwt.verify']], function ()
 {
     Route::get('/kelas', 'KelasController@show');
     Route::post('/kelas', 'KelasController@store');
+    Route::put('/kelas/{id}', 'KelasController@update');
+    Route::delete('/kelas/{id}', 'KelasController@destroy');
 
     Route::get('/siswa', 'SiswaController@show');
     Route::get('/siswa/{id}', 'SiswaController@detail');
